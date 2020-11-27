@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F997406-CABE-4A15-A9CF-DC1A5864B018}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TicariOtomasyon</RootNamespace>
+    <AssemblyName>TicariOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlConnect_.cs" />
+    <Compile Include="_Companies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Companies.Designer.cs">
+      <DependentUpon>_Companies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Contact.Designer.cs">
+      <DependentUpon>_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Customers.Designer.cs">
+      <DependentUpon>_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_EXPENSES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_EXPENSES.Designer.cs">
+      <DependentUpon>_EXPENSES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Maıl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Maıl.Designer.cs">
+      <DependentUpon>_Maıl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Personnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Personnel.Designer.cs">
+      <DependentUpon>_Personnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Products.Designer.cs">
+      <DependentUpon>_Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="_Companies.resx">
+      <DependentUpon>_Companies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Contact.resx">
+      <DependentUpon>_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Customers.resx">
+      <DependentUpon>_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_EXPENSES.resx">
+      <DependentUpon>_EXPENSES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Maıl.resx">
+      <DependentUpon>_Maıl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Personnel.resx">
+      <DependentUpon>_Personnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Products.resx">
+      <DependentUpon>_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignverticalright2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignverticalright2_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
